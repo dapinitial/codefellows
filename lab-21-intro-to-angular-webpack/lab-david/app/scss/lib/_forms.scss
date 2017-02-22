@@ -1,0 +1,34 @@
+
+form {
+  @include line;
+}
+
+input {
+  @include unit;
+  @include formStyle;
+  margin-right: 20px;
+}
+
+select {
+  @include lastUnit;
+  @include formStyle;
+  background-image: $dropdown;
+  width: 100%;
+}
+
+button {
+  @include unitRight;
+  background: $action;
+  border: transparent;
+  border-radius: 2px;
+  color: #f2f2f2;
+  cursor: pointer;
+  margin: 20px auto;
+  outline: none;
+  padding: 10px 20px;
+  text-align: center;
+  width: 200px;
+  &:hover {
+    background: darken($action, 10%);
+  }
+}

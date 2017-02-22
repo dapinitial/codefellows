@@ -1,0 +1,47 @@
+@import "../../scss/lib/theme/vars";
+@import "../../scss/lib/base/mixins";
+@import "../../scss/lib/base/animations";
+
+.history {
+  @include fontSmoothing;
+  @include line;
+  @include insetShadow;
+  background-color: darken($bg-color, 2%);
+  color: $white;
+  min-height: calc(100vh - 44px);
+  margin-bottom: 44px;
+  overflow: auto;
+
+  h2 {
+    @include line;
+    padding: $gutter-sm $gutter-std;
+  }
+
+  span {
+    font-size: 18px;
+    line-height: 1.5em;
+
+    &:first-child {
+      color: $brand-secondary;
+      font-style: italic;
+    }
+
+    &:last-child {
+      margin-left: .5em;
+      font-family: $font-secondary;
+    }
+  }
+
+  ul {
+    margin-bottom: $ml;
+    padding: 0 $gutter-std;
+    border-top: solid 1px #2e2e2e;
+    animation: pop-in 0.35s;
+    li {
+      padding: $ps;
+      &:nth-child(odd) {
+        background-color: lighten($bg-color, 4%);
+      }
+    }
+  }
+}

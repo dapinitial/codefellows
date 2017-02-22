@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="routesApp" class="lo-fi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>routes app</title>
+  </head>
+  <body>
+    <header>
+      <h1>routes app!</h1>
+    </header>
+    <nav>
+      <a class="nav-link" ng-href="/#!/home">Home</a>
+      <a class="nav-link" ng-href="/#!/signup">Sign Up</a>
+      <a class="nav-link" ng-href="/#!/gallery">Gallery</a>
+    </nav>
+    <main>
+      <ui-view></ui-view>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

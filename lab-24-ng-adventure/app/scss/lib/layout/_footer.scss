@@ -1,0 +1,14 @@
+@import "../theme/vars";
+@import "../base/mixins";
+
+.global-footer {
+  @include fontSmoothing;
+  @include line;
+  background-color: $bg-color;
+  bottom: 0;
+  box-shadow: -2px -2px 2px 2px rgba(0, 0, 0, .25);
+  left: 0;
+  right: 0;
+  padding: $ps;
+  position: fixed;
+}

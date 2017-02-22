@@ -1,0 +1,62 @@
+::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  background: $bgColor;
+  color: $textColor;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  :not([ng-cloak]) {
+    -webkit-animation: fadeIn .2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeIn .2s; /* Firefox < 16 */
+    -ms-animation: fadeIn .2s; /* Internet Explorer */
+    -o-animation: fadeIn .2s; /* Opera < 12.1 */
+    animation: fadeIn .2s;
+  }
+}
+
+section,
+header {
+  @include line;
+  @include fontSmoothing;
+  font-family: 'Asap', sans-serif;
+}
+
+pre {
+  @include line;
+  @include fontSmoothing;
+  font-family: 'Inconsolata', monospace;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.history {
+  animation: pop-in 0.35s;
+}

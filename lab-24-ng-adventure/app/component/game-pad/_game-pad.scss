@@ -1,0 +1,39 @@
+@import "../../scss/lib/theme/vars";
+@import "../../scss/lib/base/mixins";
+
+.gamepad {
+  @include line;
+  @include insetShadow;
+  background-color: darken($bg-color, 3%);
+  padding: $gutter-std;
+}
+
+.gamepad-label {
+  @include fontSmoothing;
+  @include unit;
+  color: #ea504e;
+  display: block;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+select {
+  margin: 0 $ml 0;
+}
+
+.gamepad-button {
+  border: 0;
+  background: $brand-secondary;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  margin: ms;
+  outline: 0;
+  padding: 10px;
+  width: 25%;
+  &:hover {
+    background-color: lighten( $brand-secondary, 10% )
+  }
+}

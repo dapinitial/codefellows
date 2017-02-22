@@ -1,0 +1,239 @@
+// Layout Mixins
+@mixin line($extend: true) {
+  @if $extend {
+    @extend %line;
+  } @else {
+    &:after {
+    content:" ";
+    display:table;
+    clear:both;
+    }
+  }
+}
+
+%line {
+  @include line($extend: false);
+}
+
+@mixin lastUnit($extend: true) {
+  @if $extend {
+    @extend %lastUnit;
+  } @else {
+    float: none;
+    display: block;
+    display: table-cell;
+    width: 9999em;
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+%lastUnit {
+  @include lastUnit($extend: false);
+}
+
+@mixin unit($extend: true) {
+  @if $extend {
+    @extend %unit;
+  } @else {
+    display: inline-block;
+    float: left;
+  }
+}
+
+%unit {
+  @include unit($extend: false);
+}
+
+@mixin unitRight($extend: true) {
+  @if $extend {
+    @extend %unitRight;
+  } @else {
+    float: right;
+  }
+}
+
+%unitRight {
+  @include unitRight($extend: false);
+}
+
+@mixin fontSmoothing($extend: true) {
+  @if $extend {
+    @extend %fontSmoothing;
+  } @else {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+// Type, Icon, Viewport Mixins
+%fontSmoothing {
+  @include fontSmoothing($extend: false);
+}
+
+@mixin icon($extend: true) {
+  @if $extend {
+    @extend %icon;
+  } @else {
+    @include fontSmoothing;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font: normal normal normal 30rem/1 'Material-Design-Iconic-Font';
+  }
+}
+
+%icon {
+  @include icon($extend: false);
+}
+
+@mixin ellipsis($extend: true) {
+  @if $extend {
+    @extend %ellipsis;
+  } @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+}
+
+%ellipsis {
+  @include ellipsis($extend: false);
+}
+
+@mixin boxShadow($extend: true) {
+  @if $extend {
+    @extend %boxShadow;
+  }
+  @else {
+    box-shadow: 0 1px 1px rgba(0,0,0,.14);
+  }
+}
+
+%boxShadow {
+  @include boxShadow($extend: false);
+}
+
+@mixin insetShadow($extend: true) {
+  @if $extend {
+    @extend %insetShadow;
+  }
+  @else {
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,.25);
+  }
+}
+
+%insetShadow {
+  @include insetShadow($extend: false);
+}
+
+@mixin card($extend: true) {
+  @if $extend {
+    @extend %card;
+  }
+  @else {
+    @include boxShadow;
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+%card {
+  @include card($extend: false);
+}
+
+@mixin scrolling($extend: true) {
+  @if $extend {
+    @extend %scrolling;
+  }
+  @else {
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-base-color: #333;
+    scrollbar-3dlight-color: #3e3e3e;
+    scrollbar-highlight-color: #4e4e4e;
+    scrollbar-track-color: #444;
+    scrollbar-arrow-color: #101010;
+    scrollbar-shadow-color: #222;
+    scrollbar-dark-shadow-color: #111;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+%scrolling {
+  @include scrolling($extend: false);
+}
+
+@mixin bottomDotted($extend: true) {
+  @if $extend {
+    @extend %bottomDotted;
+  }
+  @else {
+    background-image: linear-gradient(to right, #333 10%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    margin-bottom: 0rem;
+    padding-bottom: 10rem;
+    &:last-of-type {
+      background-image: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+%bottomDotted {
+  @include bottomDotted($extend: false);
+}
+
+@mixin icon($extend: true) {
+  @if $extend {
+    @extend %icon;
+  }
+  @else {
+    @include fontSmoothing;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font: normal normal normal 30rem/1 'Material-Design-Iconic-Font';
+  }
+}
+
+%icon {
+  @include icon($extend: false);
+}
+
+@mixin formStyle($extend: true) {
+  @if $extend {
+    @extend %formStyle;
+  }
+  @else {
+    -webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    background-image: -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    border: 1px solid #AAA;
+    color: #555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+%formStyle {
+  @include formStyle($extend: false);
+}

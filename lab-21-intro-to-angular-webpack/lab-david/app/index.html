@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="cowsayApp">
+<head>
+  <meta charset="utf-8">
+  <title>Cowsay App</title>
+  <style>
+  [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+    opacity: 0;
+  }
+  </style>
+</head>
+<body ng-cloak ng-controller="CowsayController as cowsayCtrl">
+  <header>
+    <h1>{{cowsayCtrl.heading}}</h1>
+  </header>
+  <main>
+    <section>
+      <form ng-submit="cowsayCtrl.save()" novalidate>
+        <div class="left-column">
+          <input placeholder="Type something" type="text" ng-model="cowsayCtrl.text">
+        </div>
+        <div class="right-column">
+          <select ng-model="cowsayCtrl.current">
+            <option ng-repeat="character in cowsayCtrl.characters" value="{{ character }}">{{ character }}</option>
+          </select>
+        </div>
+        <button type="submit">Save</button>
+      </section>
+      <section>
+        <pre>{{cowsayCtrl.update(cowsayCtrl.text)}}</pre>
+      </section>
+    </form>
+    <section ng-show="cowsayCtrl.backStack[0]">
+      <button ng-click="cowsayCtrl.undo()">Undo</button>
+      <pre class="history">{{cowsayCtrl.current}}</pre>
+    </section>
+  </main>
+</body>
+</html>

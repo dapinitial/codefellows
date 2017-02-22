@@ -1,0 +1,16 @@
+@import "../../scss/lib/theme/vars";
+@import "../../scss/lib/base/mixins";
+
+.player-info {
+  @include fontSmoothing;
+  padding: $gutter-sm $gutter-std;
+
+  li {
+    margin-bottom: $gutter-sm / 2;
+
+    span {
+      @include fontSmoothing;
+      font-size: 15px;
+    }
+  }
+}

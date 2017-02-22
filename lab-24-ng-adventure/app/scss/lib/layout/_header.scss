@@ -1,0 +1,8 @@
+.global-header {
+  @include line;
+  padding: $gutter-std;
+}
+
+.global-header-h1 {
+  color: #808080;
+}
