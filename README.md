@@ -13,8 +13,6 @@ Express.js
 Angular.js (v1) w/ Angular UI Router
 Node.js
 
----
-
 Homebrew
 Yarn, Grunt, Gulp, NPM
 WebPack 2 and WebPack Dev Server
@@ -23,14 +21,7 @@ Karma + Jasmine for testing
 bcrypt
 Mocha/Chai
 
----
-
 SCSS, Stylus, LESS
-
-To come:
-React and more!
-
----
 
 Some of the things that I dabble in Full-Stack Web Development are: web APIs, CRUD, promises, test-driven development, behavior-driven development, routes, route testing, unit testing, Authentication, Authorization, factory functions, writing services, dependency injection, closures, data structures, algorithms, linked lists, stacks and queues, binary search tris, and many more! I use a f*** ton of JavaScript plugins. Just check my growing package.jsons!
 
