@@ -1,6 +1,20 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 28: Angular CRUD
 =====================================
 
+Dependency!
+https://github.com/slugbyte/slugram-backend.git
+
+Make sure to add:
+To the cf-gram-gallery's .env in the root:
+API_URL=http://localhost:3000
+
+And to the slug-backend's .env in the root:
+MONGODB_URI=mongodb://localhost/slugram
+PORT=3000
+APP_SECRET=stupid
+
+Don't forget to yarn each to download and install all dependencies and then yarn start.
+
 ## CRUD Services
   * **Overview**
     * we'll be using angular services to create libraries that allow for RESTful CRUD operations against the `slugram` backend application
