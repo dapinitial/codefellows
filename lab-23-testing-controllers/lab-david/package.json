@@ -1,7 +1,7 @@
 {
-  "name": "lab-21-intro-to-angular-webpack",
+  "name": "lab-23-testing-controllers",
   "version": "1.0.0",
-  "description": "CodeFellows JS401 Lab 21",
+  "description": "CodeFellows JS401 Lab 23",
   "main": "index.js",
   "repository": {},
   "author": "David Puerto",

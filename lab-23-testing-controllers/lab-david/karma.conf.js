@@ -13,25 +13,12 @@ module.exports = function(config) {
     files: [
       'test/**/*-test.js'
     ],
-    // client: {
-    //   jasmine: {
-    //     random: true,
-    //     seed: '4321',
-    //     stopOnFailure: true
-    //   }
-    // },
     exclude: [
     ],
     preprocessors: {
       'src/**/*.scss': ['scss'],
       'test/**/*-test.js': ['babel', 'webpack']
     },
-    // babelPreprocessor: {
-    //   options: {
-    //     presets: ['es2015'],
-    //     sourceMap: 'inline'
-    //   }
-    // },
     reporters: ['progress'],
     port: 9876,
     colors: true,
