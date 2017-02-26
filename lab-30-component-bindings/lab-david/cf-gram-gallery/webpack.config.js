@@ -29,10 +29,10 @@ if (production) {
     }),
     new CleanPlugin()
   ]);
-}
+};
 
 module.exports = {
-  entry: `${__dirname}/app/index.js`,
+  entry: `${__dirname}/app/entry.js`,
   devtool: production ? false : 'eval',
   plugins,
   output: {
