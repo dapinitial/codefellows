@@ -1,29 +1,29 @@
-'use strict'
+'use strict';
 
-const angular = require('angular')
-const ngAdventure = angular.module('ngAdventure')
+const angular = require('angular');
+const ngAdventure = angular.module('ngAdventure');
 
 ngAdventure.component('gamePad', {
   template: require('./game-pad.html'),
   controller: 'GamePadController',
   controllerAs: 'vm'
-})
+});
 
-ngAdventure.controller('GamePadController', ['$log',  'playerService', GamePadController])
+ngAdventure.controller('GamePadController', ['$log',  'playerService', GamePadController]);
 
 function GamePadController($log, playerService) {
-  $log.debug('GamePadController')
+  $log.debug('GamePadController');
 
-  this.directions = ['north', 'south', 'east', 'west']
-  this.moveDirection = this.directions[0]
+  this.directions = ['north', 'south', 'east', 'west'];
+  this.moveDirection = this.directions[0];
 
   this.movePlayer = function() {
     playerService.movePlayer(this.moveDirection)
     .then( location => {
-      $log.log(`player currently at: ${location}`)
+      $log.log(`player currently at: ${location}`);
     })
     .catch( err => {
-      $log.error(err)
-    })
-  }
+      $log.error(err);
+    });
+  };
 }

@@ -7,7 +7,7 @@ describe('Player Info Controller', function() {
   beforeEach(() => {
     angular.mock.module('ngAdventure');
     angular.mock.inject($controller => {
-      this.cowsayCtrl = new $controller('PlayerInfoController');
+      this.PlayerInfoController = new $controller('PlayerInfoController');
     });
   });
 
