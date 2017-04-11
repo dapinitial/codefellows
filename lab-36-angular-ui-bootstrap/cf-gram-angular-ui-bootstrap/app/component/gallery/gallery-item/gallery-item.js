@@ -19,4 +19,4 @@ function GalleryItemController($log, galleryService) {
   this.deleteGallery = function() {
     galleryService.deleteGallery(this.gallery._id);
   };
-};
+}

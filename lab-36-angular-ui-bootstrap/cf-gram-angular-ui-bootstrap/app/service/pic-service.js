@@ -40,4 +40,4 @@ function picService($q, $log, $http, Upload, authService) {
   };
 
   return service;
-};
+}
